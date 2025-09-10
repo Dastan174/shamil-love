@@ -35,7 +35,7 @@ button {
 }
 .main {
   padding-block: 25px;
-  img {
+  .img {
     max-width: 485px;
     width: 100%;
   }
