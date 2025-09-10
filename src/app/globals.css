@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+body {
+  max-width: 500px;
+  width: 100%;
+  background: #edefe9;
+  color: #333333;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+a,
+p,
+span,
+button {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main {
+  padding-block: 25px;
+  img {
+    max-width: 485px;
+    width: 100%;
+  }
+}
