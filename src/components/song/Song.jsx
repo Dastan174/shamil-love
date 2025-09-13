@@ -4,7 +4,13 @@ import React from "react";
 const Song = () => {
   return (
     <div className="main">
-      <Image src="/assets/song.png" alt="song" width={450} height={600} />
+      <Image
+        src="/assets/song.png"
+        alt="song"
+        width={450}
+        height={600}
+        className="img"
+      />
     </div>
   );
 };

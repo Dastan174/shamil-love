@@ -4,7 +4,13 @@ import React from "react";
 const Trip = () => {
   return (
     <div className="main">
-      <Image src="/assets/trip.png" alt="trip" width={475} height={600} />
+      <Image
+        src="/assets/trip.png"
+        alt="trip"
+        width={475}
+        height={600}
+        className="img"
+      />
     </div>
   );
 };
