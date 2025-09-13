@@ -7,7 +7,7 @@ const Song = () => {
       <Image
         src="/assets/song.png"
         alt="song"
-        width={450}
+        width={475}
         height={600}
         className="img"
       />
