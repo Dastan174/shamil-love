@@ -37,6 +37,9 @@ button {
 }
 .main {
   padding-block: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   .img {
     max-width: 475px;
     width: 100%;
