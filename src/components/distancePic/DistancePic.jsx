@@ -4,7 +4,13 @@ import React from "react";
 const DistancePic = () => {
   return (
     <div className="main">
-      <Image src="/distancePhoto.jpg" alt="dist" fill className="img" />
+      <Image
+        src="/distancePhoto.jpg"
+        alt="dist"
+        width={475}
+        height={830}
+        className="img"
+      />
     </div>
   );
 };
