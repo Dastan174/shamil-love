@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./loveCard.css";
-export default function CurtainCard() {
+export default function CurtainCard({ onOpen }) {
   const [curtainOpen, setCurtainOpen] = useState(false);
   const [showCard, setShowCard] = useState(false);
 
@@ -11,6 +11,7 @@ export default function CurtainCard() {
 
   const handleTransitionEnd = () => {
     setShowCard(true); // после окончания анимации показываем открытку
+    if (onOpen) onOpen();
   };
 
   return (
