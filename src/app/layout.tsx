@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
+import Heart from "../shared/HeartEffect";
 import "./globals.css";
 
 const inter = Inter({
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.className}`}>
+        <Heart />
+        {children}
+      </body>
     </html>
   );
 }
