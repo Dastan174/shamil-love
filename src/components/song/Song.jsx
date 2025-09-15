@@ -3,7 +3,7 @@ import React from "react";
 
 const Song = () => {
   return (
-    <div className="main">
+    <div className="wrapper">
       <Image
         src="/assets/song.png"
         alt="song"

@@ -3,7 +3,7 @@ import React from "react";
 
 const Trip = () => {
   return (
-    <div className="main">
+    <div className="wrapper">
       <Image
         src="/assets/trip.png"
         alt="trip"
