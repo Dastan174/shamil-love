@@ -5,6 +5,11 @@
   font-family: Inter;
   /* outline: 1px solid blue; */
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background: #edefe9;
   color: #333333;
