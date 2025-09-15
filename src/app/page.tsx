@@ -3,10 +3,12 @@ import DistancePic from "../components/distancePic/DistancePic";
 import VideoShamil from "../components/videoShamil/VideoShamil";
 import Song from "../components/song/Song";
 import Trip from "../components/trip/Trip";
+import LoveCard from "../components/loveCard/LoveCard";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <LoveCard />
       <DistancePic />
       <VideoShamil />
       <Song />
