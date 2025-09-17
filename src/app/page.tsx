@@ -5,6 +5,8 @@ import VideoShamil from "../components/videoShamil/VideoShamil";
 import Song from "../components/song/Song";
 import Trip from "../components/trip/Trip";
 import LoveCard from "../components/loveCard/LoveCard";
+import Chat from "../components/chat/Chat";
+import LastChat from "../components/lastChat/LastChat";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,14 +14,16 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <LoveCard onOpen={() => setOnOpen(true)} />
-      {onOpen && (
-        <>
-          <DistancePic />
-          <VideoShamil />
-          <Song />
-          <Trip />
-        </>
-      )}
+      {/* {onOpen && ( */}
+      <>
+        <DistancePic />
+        <VideoShamil />
+        <Song />
+        <Trip />
+        <Chat />
+        <LastChat />
+      </>
+      {/* )} */}
     </div>
   );
 }
