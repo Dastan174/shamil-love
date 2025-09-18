@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.page}>
-      <audio ref={audioRef} autoPlay loop muted>
+      <audio ref={audioRef} autoPlay loop>
         <source src="/assets/shama-song.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
