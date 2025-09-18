@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <audio ref={audioRef} autoPlay loop>
-        <source src="/shamaSong.mp3" type="audio/mpeg" />
+        <source src="/shamaSong.mp3" type="audio/mp3" />
         Ваш браузер не поддерживает аудио.
       </audio>
       <LoveCard onOpen={() => setOnOpen(true)} />
