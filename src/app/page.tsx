@@ -12,32 +12,37 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const [onOpen, setOnOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    const enableSound = () => {
-      if (audioRef.current) {
-        audioRef.current.muted = false; // снимаем mute
-        audioRef.current
-          .play()
-          .catch((e) => console.log("Ошибка воспроизведения:", e));
-      }
-    };
-    document.addEventListener("click", enableSound, { once: true });
-    document.addEventListener("scroll", enableSound, { once: true });
-    document.addEventListener("keydown", enableSound, { once: true });
-    return () => {
-      document.removeEventListener("click", enableSound);
-      document.removeEventListener("scroll", enableSound);
-      document.removeEventListener("keydown", enableSound);
-    };
-  }, []);
+  const handlePlay = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+  // useEffect(() => {
+  //   const enableSound = () => {
+  //     if (audioRef.current) {
+  //       audioRef.current.muted = false; // снимаем mute
+  //       audioRef.current
+  //         .play()
+  //         .catch((e) => console.log("Ошибка воспроизведения:", e));
+  //     }
+  //   };
+  //   document.addEventListener("click", enableSound, { once: true });
+  //   document.addEventListener("scroll", enableSound, { once: true });
+  //   document.addEventListener("keydown", enableSound, { once: true });
+  //   return () => {
+  //     document.removeEventListener("click", enableSound);
+  //     document.removeEventListener("scroll", enableSound);
+  //     document.removeEventListener("keydown", enableSound);
+  //   };
+  // }, []);
 
   return (
     <div className={styles.page}>
-      <audio ref={audioRef} loop autoPlay>
+      <audio ref={audioRef} loop>
         <source src="/assets/songv.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
+      <button onClick={handlePlay}>play music</button>
       <LoveCard onOpen={() => setOnOpen(true)} />
       {/* {onOpen && ( */}
       <>
