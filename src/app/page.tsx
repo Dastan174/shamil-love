@@ -7,10 +7,13 @@ import Trip from "../components/trip/Trip";
 import LoveCard from "../components/loveCard/LoveCard";
 import Chat from "../components/chat/Chat";
 import LastChat from "../components/lastChat/LastChat";
+import HeartsRain from "../shared/rain/HeartsRain";
+
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [onOpen, setOnOpen] = useState(false);
+  const [rainActive, setRainActive] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   // const handlePlay = () => {
   //   if (audioRef.current) {
@@ -36,24 +39,31 @@ export default function Home() {
     };
   }, []);
 
+  const handleCardOpen = () => {
+    setOnOpen(true);
+    setRainActive(true);
+  };
+
   return (
     <div className={styles.page}>
       <audio ref={audioRef} loop>
         <source src="/shamaSong.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
+
       {/* <button onClick={handlePlay}>play music</button> */}
-      <LoveCard onOpen={() => setOnOpen(true)} />
-      {/* {onOpen && ( */}
-      <>
-        <DistancePic />
-        <VideoShamil />
-        <Song />
-        <Trip />
-        <Chat />
-        <LastChat />
-      </>
-      {/* )} */}
+      <LoveCard onOpen={handleCardOpen} />
+      {onOpen && (
+        <>
+          {rainActive && <HeartsRain />}
+          <DistancePic />
+          <VideoShamil />
+          <Song />
+          <Trip />
+          <Chat />
+          <LastChat />
+        </>
+      )}
     </div>
   );
 }
