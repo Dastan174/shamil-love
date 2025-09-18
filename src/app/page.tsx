@@ -11,12 +11,10 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [onOpen, setOnOpen] = useState(false);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const handlePlay = () => {
     if (audioRef.current) {
-      audioRef.current.play().catch((err) => {
-        console.log("Ошибка воспроизведения:", err);
-      });
+      audioRef.current.play();
     }
   };
   // useEffect(() => {
