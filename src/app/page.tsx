@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <audio ref={audioRef} loop>
-        <source src="/assets/songv.mp3" type="audio/mpeg" />
+        <source src="/shamaSong.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудио.
       </audio>
       {/* <button onClick={handlePlay}>play music</button> */}
