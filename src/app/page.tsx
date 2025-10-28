@@ -59,26 +59,30 @@ export default function Home() {
       {onOpen && (
         <>
           {rainActive && <HeartsRain />}
-          <Image
-            src="/assets/two.jpg"
-            alt="love"
-            width={475}
-            height={830}
-            className="img"
-          />
+          <div className="wrapper">
+            <Image
+              src="/assets/two.jpg"
+              alt="love"
+              width={475}
+              height={830}
+              className="img"
+            />
+          </div>
           <Slider />
           <DistancePic />
           <Chat />
           <VideoShamil />
-          <Image
-            src="/assets/four.png"
-            alt="love"
-            width={475}
-            height={730}
-            className="img"
-          />
-          <Song />
+          <div className="wrapper">
+            <Image
+              src="/assets/four.png"
+              alt="love"
+              width={475}
+              height={730}
+              className="img"
+            />
+          </div>
           <Balloons />
+          <Song />
           <Trip />
           <LastChat />
         </>
