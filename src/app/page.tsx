@@ -12,6 +12,7 @@ import Slider from "../components/slider/Slider";
 
 import { useEffect, useRef, useState } from "react";
 import Balloons from "../components/balloons/Balloons";
+import Image from "next/image";
 
 export default function Home() {
   const [onOpen, setOnOpen] = useState(false);
@@ -58,10 +59,24 @@ export default function Home() {
       {onOpen && (
         <>
           {rainActive && <HeartsRain />}
+          <Image
+            src="/assets/two.jpg"
+            alt="love"
+            width={475}
+            height={830}
+            className="img"
+          />
           <Slider />
           <DistancePic />
           <Chat />
           <VideoShamil />
+          <Image
+            src="/assets/four.png"
+            alt="love"
+            width={475}
+            height={730}
+            className="img"
+          />
           <Song />
           <Balloons />
           <Trip />

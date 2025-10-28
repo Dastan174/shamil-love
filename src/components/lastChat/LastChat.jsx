@@ -9,7 +9,7 @@ export default function FooterChat() {
     <div className="last-chat-pad">
       <div className="mainbek">
         <button className="btn" onClick={() => setChatVisible(true)}>
-          Ответить 💌
+          Нажми чтобы ответить 💌
         </button>
       </div>
       <AnswerChat visible={chatVisible} onClose={() => setChatVisible(false)} />

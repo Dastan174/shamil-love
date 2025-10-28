@@ -156,3 +156,26 @@
     #ffbf00
   ); /* золотой/жёлтый */
 }
+/* Анимация "плавающего" движения */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-5px, -5px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(5px, -10px) rotate(2deg);
+  }
+  75% {
+    transform: translate(-3px, -5px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* Применяем анимацию к форме шара */
+.balloon .shape {
+  animation: float 4s ease-in-out infinite;
+}
