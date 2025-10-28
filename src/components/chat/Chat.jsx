@@ -23,6 +23,7 @@ export default function ChatLetter() {
             💌
             <span className="badge">1</span>
           </div>
+          <span className="tooltip">Нажми на иконку</span>
         </div>
       </div>
 

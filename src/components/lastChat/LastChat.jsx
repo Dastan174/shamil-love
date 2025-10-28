@@ -6,7 +6,7 @@ export default function FooterChat() {
   const [chatVisible, setChatVisible] = useState(false);
 
   return (
-    <div>
+    <div className="last-chat-pad">
       <div className="mainbek">
         <button className="btn" onClick={() => setChatVisible(true)}>
           Ответить 💌

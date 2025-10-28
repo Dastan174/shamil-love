@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to bottom, #aee1f9, #ffffff);
+  /* background: linear-gradient(to bottom, #aee1f9, #ffffff); */
   overflow: hidden;
 }
 
@@ -76,7 +76,7 @@
 /* Текст после лопания */
 .offer-text {
   min-width: 200px; /* минимальная ширина */
-  max-width: 350px; /* максимальная ширина */
+  max-width: 320px; /* максимальная ширина */
   width: auto; /* адаптивная ширина */
   text-align: center; /* текст по центру */
   position: absolute;
@@ -124,4 +124,35 @@
 .balloon-4 {
   top: 10%;
   left: 70%;
+}
+.balloon-0 .shape {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ff4b5c,
+    #ff1e3c
+  ); /* красный */
+}
+
+.balloon-1 .shape {
+  background: radial-gradient(circle at 30% 30%, #4b9eff, #1e6eff); /* синий */
+}
+
+.balloon-2 .shape {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ff6bcd,
+    #ff3fa0
+  ); /* розовый */
+}
+
+.balloon-3 .shape {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #f0f0f0); /* белый */
+}
+
+.balloon-4 .shape {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffd700,
+    #ffbf00
+  ); /* золотой/жёлтый */
 }

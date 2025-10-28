@@ -55,19 +55,19 @@ export default function Home() {
 
       {/* <button onClick={handlePlay}>play music</button> */}
       <LoveCard onOpen={handleCardOpen} />
-      {/* {onOpen && ( */}
-      <>
-        {rainActive && <HeartsRain />}
-        <Slider />
-        <DistancePic />
-        <Chat />
-        <VideoShamil />
-        <Song />
-        <Trip />
-        <LastChat />
-        <Balloons />
-      </>
-      {/* )} */}
+      {onOpen && (
+        <>
+          {rainActive && <HeartsRain />}
+          <Slider />
+          <DistancePic />
+          <Chat />
+          <VideoShamil />
+          <Song />
+          <Balloons />
+          <Trip />
+          <LastChat />
+        </>
+      )}
     </div>
   );
 }

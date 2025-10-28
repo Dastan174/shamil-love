@@ -10,6 +10,45 @@
   font-size: 1rem;
   font-weight: 500;
 }
+/* Подсказка */
+.mail-wrapper {
+  position: relative; /* чтобы tooltip позиционировался относительно иконки */
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%; /* над иконкой */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Стрелка подсказки */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+/* Показываем подсказку при наведении */
+.mail-wrapper:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
 
 .mainbek {
   display: flex;

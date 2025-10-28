@@ -70,3 +70,11 @@ button {
     opacity: 0;
   }
 }
+
+.last-chat-pad{
+  padding-top: 150px;
+  padding-bottom: 400px;
+}
+.main{
+  padding-block: 150px;
+}

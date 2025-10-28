@@ -1,10 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function AnswerChat({ visible, onClose }) {
   const [messages, setMessages] = useState([]);
   const [currentText, setCurrentText] = useState("");
   const [showTyping, setShowTyping] = useState(false);
+  const overlayRef = useRef(null);
 
   const baynurMessage =
     "Хотя мы далеко друг от друга, я всё равно чувствую твою любовь. Думаю о том, как скоро будем вместе и реализуем наши планы.";
@@ -37,9 +38,15 @@ export default function AnswerChat({ visible, onClose }) {
 
   if (!visible) return null;
 
+  // Обработчик клика по overlay
+  const handleOverlayClick = (e) => {
+    if (e.target === overlayRef.current) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="chat-overlay">
-      {/* Крестик вынесен за пределы контейнера */}
+    <div className="chat-overlay" ref={overlayRef} onClick={handleOverlayClick}>
       <button className="close-btn" onClick={onClose}>
         ✖️
       </button>

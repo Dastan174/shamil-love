@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Marck_Script } from "next/font/google";
 import Heart from "../shared/HeartEffect";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
+});
+const marck_Script = Marck_Script({
+  subsets: ["latin", "cyrillic"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} ${marck_Script.className}`}>
         <Heart />
         {children}
       </body>
