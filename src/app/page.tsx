@@ -8,8 +8,10 @@ import LoveCard from "../components/loveCard/LoveCard";
 import Chat from "../components/chat/Chat";
 import LastChat from "../components/lastChat/LastChat";
 import HeartsRain from "../shared/rain/HeartsRain";
+import Slider from "../components/slider/Slider";
 
 import { useEffect, useRef, useState } from "react";
+import Balloons from "../components/balloons/Balloons";
 
 export default function Home() {
   const [onOpen, setOnOpen] = useState(false);
@@ -53,17 +55,19 @@ export default function Home() {
 
       {/* <button onClick={handlePlay}>play music</button> */}
       <LoveCard onOpen={handleCardOpen} />
-      {onOpen && (
-        <>
-          {rainActive && <HeartsRain />}
-          <DistancePic />
-          <VideoShamil />
-          <Song />
-          <Trip />
-          <Chat />
-          <LastChat />
-        </>
-      )}
+      {/* {onOpen && ( */}
+      <>
+        {rainActive && <HeartsRain />}
+        <Slider />
+        <DistancePic />
+        <Chat />
+        <VideoShamil />
+        <Song />
+        <Trip />
+        <LastChat />
+        <Balloons />
+      </>
+      {/* )} */}
     </div>
   );
 }
