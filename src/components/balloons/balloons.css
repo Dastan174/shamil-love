@@ -5,6 +5,13 @@
   /* background: linear-gradient(to bottom, #aee1f9, #ffffff); */
   overflow: hidden;
 }
+.popped {
+  pointer-events: none; /* чтобы больше не кликался */
+}
+
+.popped .shape {
+  animation: pop 0.4s forwards;
+}
 
 /* Баллон */
 .balloon {
@@ -67,10 +74,6 @@
     transform: scale(0);
     opacity: 0;
   }
-}
-
-.popped .shape {
-  animation: pop 0.4s forwards;
 }
 
 /* Текст после лопания */
@@ -176,6 +179,6 @@
 }
 
 /* Применяем анимацию к форме шара */
-.balloon .shape {
+/* .balloon .shape {
   animation: float 4s ease-in-out infinite;
-}
+} */

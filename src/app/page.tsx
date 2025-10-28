@@ -56,37 +56,37 @@ export default function Home() {
 
       {/* <button onClick={handlePlay}>play music</button> */}
       <LoveCard onOpen={handleCardOpen} />
-      {onOpen && (
-        <>
-          {rainActive && <HeartsRain />}
-          <div className="wrapper">
-            <Image
-              src="/assets/two.jpg"
-              alt="love"
-              width={475}
-              height={830}
-              className="img"
-            />
-          </div>
-          <Slider />
-          <DistancePic />
-          <Chat />
-          <VideoShamil />
-          <div className="wrapper">
-            <Image
-              src="/assets/four.png"
-              alt="love"
-              width={475}
-              height={730}
-              className="img"
-            />
-          </div>
-          <Balloons />
-          <Song />
-          <Trip />
-          <LastChat />
-        </>
-      )}
+      {/* {onOpen && ( */}
+      <>
+        {rainActive && <HeartsRain />}
+        <div className="wrapper">
+          <Image
+            src="/assets/two.jpg"
+            alt="love"
+            width={475}
+            height={830}
+            className="img"
+          />
+        </div>
+        <Slider />
+        <DistancePic />
+        <Chat />
+        <VideoShamil />
+        <div className="wrapper">
+          <Image
+            src="/assets/four.png"
+            alt="love"
+            width={475}
+            height={730}
+            className="img"
+          />
+        </div>
+        <Balloons />
+        <Song />
+        <Trip />
+        <LastChat />
+      </>
+      {/* )} */}
     </div>
   );
 }
