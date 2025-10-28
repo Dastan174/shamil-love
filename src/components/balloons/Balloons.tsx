@@ -11,7 +11,8 @@ const offers = [
 ];
 
 export default function Balloons() {
-  const [popped, setPopped] = useState<number | null>(null);
+  // Первый шарик уже "лопнут"
+  const [popped, setPopped] = useState<number | null>(1);
 
   return (
     <div className="sky">
